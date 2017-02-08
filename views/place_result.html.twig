@@ -1,0 +1,29 @@
+<DOCTYPE!>
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>List of Country and city</h1>
+    {%if not empty %}
+      {%for city in cities%}
+        <h3>{{ city.getCountryName }}</h3>
+        <ul>
+          <li>{{ city.getCityName }}</li>
+          <li>{{ city.getCityYear }}</li>
+        </ul>
+      {%endfor%}
+    {%endif%}
+
+    <a href='/'>Add another country</a>
+
+    {%if empty%}
+    <h1>Your list has been cleared!</h1>
+    {%endif%}
+
+    <a href="/delete">
+    <button name="delete">delete list</button>
+    </a>
+
+
+  </body>
+</html>
